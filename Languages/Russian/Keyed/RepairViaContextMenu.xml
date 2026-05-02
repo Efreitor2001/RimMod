@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RVCM_ModName>Ремонт через ПКМ</RVCM_ModName>
+  <RVCM_RepairAction>Починить: {0}</RVCM_RepairAction>
+  <RVCM_RepairActionPawn>Починить снаряжение: {0}</RVCM_RepairActionPawn>
+  <RVCM_CannotReach>Нельзя дотянуться до предмета</RVCM_CannotReach>
+  <RVCM_NoSkill>Нужен навык "Ремесло" не ниже {0}</RVCM_NoSkill>
+  <RVCM_Reserved>Предмет уже занят</RVCM_Reserved>
+  <RVCM_NotDamaged>Предмет не повреждён</RVCM_NotDamaged>
+</LanguageData>

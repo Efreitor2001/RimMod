@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>RVCM_RepairItem</defName>
+    <driverClass>RepairViaContextMenu.JobDriver_RepairItem</driverClass>
+    <reportString>чинит предмет.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+</Defs>
