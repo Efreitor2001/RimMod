@@ -18,7 +18,3 @@
 
 ## Локализация
 Весь пользовательский текст находится в `Languages/Russian/Keyed/RepairViaContextMenu.xml`.
-
-
-## Примечание по сборке
-Если `RimWorldPath` не задан или `0Harmony.dll` не найден, проект подтянет Harmony из NuGet (`Lib.Harmony`) только для компиляции исходников. Для запуска в игре всё равно используется Harmony из RimWorld/модов.
