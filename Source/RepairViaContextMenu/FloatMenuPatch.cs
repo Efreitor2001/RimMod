@@ -8,17 +8,15 @@ using Verse.AI;
 
 namespace RepairViaContextMenu;
 
-[HarmonyPatch(typeof(FloatMenuMakerMap), "ChoicesAtFor", new[] { typeof(Vector3), typeof(Pawn), typeof(bool) })]
+[HarmonyPatch(typeof(FloatMenuMakerMap), nameof(FloatMenuMakerMap.AddHumanlikeOrders))]
 public static class FloatMenuPatch
 {
     private const int RequiredCrafting = 4;
 
-    public static void Postfix(Vector3 clickPos, Pawn pawn, ref List<FloatMenuOption> __result)
+    public static void Postfix(Vector3 clickPos, Pawn pawn, List<FloatMenuOption> opts)
     {
         if (pawn?.Map == null || pawn.Dead || pawn.Downed)
             return;
-
-        __result ??= new List<FloatMenuOption>();
 
         var c = IntVec3.FromVector3(clickPos);
         var things = c.GetThingList(pawn.Map);
@@ -26,12 +24,14 @@ public static class FloatMenuPatch
         foreach (var thing in things)
         {
             if (IsRepairableItem(thing))
-                __result.Add(BuildItemOption(pawn, thing));
+            {
+                opts.Add(BuildItemOption(pawn, thing));
+            }
 
             if (thing is Pawn targetPawn)
             {
                 foreach (var gear in GetDamagedGear(targetPawn))
-                    __result.Add(BuildItemOption(pawn, gear, targetPawn));
+                    opts.Add(BuildItemOption(pawn, gear, targetPawn));
             }
         }
     }
