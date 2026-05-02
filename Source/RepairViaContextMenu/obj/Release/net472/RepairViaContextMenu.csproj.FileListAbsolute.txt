@@ -1,0 +1,6 @@
+C:\Users\Efreitor2001\Desktop\Новая папка (3)\RimMod\Source\RepairViaContextMenu\obj\Release\net472\RepairViaContextMenu.csproj.AssemblyReference.cache
+C:\Users\Efreitor2001\Desktop\Новая папка (3)\RimMod\Source\RepairViaContextMenu\obj\Release\net472\RepairViaContextMenu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Efreitor2001\Desktop\Новая папка (3)\RimMod\Source\RepairViaContextMenu\obj\Release\net472\RepairViaContextMenu.AssemblyInfoInputs.cache
+C:\Users\Efreitor2001\Desktop\Новая папка (3)\RimMod\Source\RepairViaContextMenu\obj\Release\net472\RepairViaContextMenu.AssemblyInfo.cs
+C:\Users\Efreitor2001\Desktop\Новая папка (3)\RimMod\Source\RepairViaContextMenu\obj\Release\net472\RepairViaContextMenu.csproj.CoreCompileInputs.cache
+C:\Users\Efreitor2001\Desktop\Новая папка (3)\RimMod\Source\RepairViaContextMenu\obj\Release\net472\RepairViaContextMenu.sourcelink.json
