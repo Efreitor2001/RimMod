@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -8,10 +9,16 @@ using Verse.AI;
 
 namespace RepairViaContextMenu;
 
-[HarmonyPatch(typeof(FloatMenuMakerMap), "ChoicesAtFor")]
+[HarmonyPatch]
 public static class FloatMenuPatch
 {
     private const int RequiredCrafting = 4;
+
+    static MethodBase TargetMethod()
+    {
+        return AccessTools.Method(typeof(FloatMenuMakerMap), "ChoicesAtFor")
+               ?? AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders");
+    }
 
     public static void Postfix(Vector3 clickPos, Pawn pawn, ref List<FloatMenuOption> __result)
     {
