@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <identifier>rimmod.repaircontextmenu</identifier>
+  <version>1.0.0</version>
+  <dependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
+  </dependencies>
+</Manifest>
