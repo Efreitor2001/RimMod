@@ -4,33 +4,19 @@
     <LangVersion>latest</LangVersion>
     <AssemblyName>RepairViaContextMenu</AssemblyName>
     <RootNamespace>RepairViaContextMenu</RootNamespace>
-
-    <!-- Можно передать через: dotnet build -p:RimWorldPath="C:\Path\To\RimWorld" -->
-    <RimWorldPath Condition="'$(RimWorldPath)' == '' and Exists('C:\Program Files (x86)\Steam\steamapps\common\RimWorld')">C:\Program Files (x86)\Steam\steamapps\common\RimWorld</RimWorldPath>
-    <RimWorldPath Condition="'$(RimWorldPath)' == '' and Exists('C:\Program Files\Steam\steamapps\common\RimWorld')">C:\Program Files\Steam\steamapps\common\RimWorld</RimWorldPath>
-    <RimWorldManagedPath>$(RimWorldPath)\RimWorldWin64_Data\Managed</RimWorldManagedPath>
   </PropertyGroup>
-
-  <Target Name="ValidateRimWorldPath" BeforeTargets="ResolveReferences">
-    <Error Condition="'$(RimWorldPath)' == ''"
-           Text="Не найден RimWorldPath. Укажите путь: dotnet build -c Release -p:RimWorldPath=&quot;C:\Path\To\RimWorld&quot;" />
-    <Error Condition="!Exists('$(RimWorldManagedPath)\Assembly-CSharp.dll')"
-           Text="Не найден Assembly-CSharp.dll по пути $(RimWorldManagedPath). Проверьте RimWorldPath." />
-    <Error Condition="!Exists('$(RimWorldManagedPath)\UnityEngine.CoreModule.dll')"
-           Text="Не найден UnityEngine.CoreModule.dll по пути $(RimWorldManagedPath). Проверьте RimWorldPath." />
-  </Target>
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(RimWorldManagedPath)\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>$(RimWorldManagedPath)\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="0Harmony" Condition="Exists('$(RimWorldManagedPath)\0Harmony.dll')">
-      <HintPath>$(RimWorldManagedPath)\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony">
+      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
