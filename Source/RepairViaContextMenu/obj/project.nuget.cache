@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "F6x0ekCZMcQ=",
+  "dgSpecHash": "udwVH8MhNBc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Efreitor2001\\Desktop\\Новая папка (3)\\RimMod\\Source\\RepairViaContextMenu\\RepairViaContextMenu.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Efreitor2001\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512",
     "C:\\Users\\Efreitor2001\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
     "C:\\Users\\Efreitor2001\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.3\\microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512"
   ],

@@ -16,7 +16,7 @@
       <Private>false</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>$(RimWorldPath)\RimWorldWin64_Data\Managed\0Harmony.dll</HintPath>
+      <HintPath>$(RimWorldPath)\Mods\Harmony\Assemblies\0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

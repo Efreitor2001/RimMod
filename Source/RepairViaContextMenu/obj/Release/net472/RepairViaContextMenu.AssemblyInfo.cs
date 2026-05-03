@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RepairViaContextMenu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ff2dbd011ce3d540d9306e0a75bec37f4a7abd0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a5053f6a5b346d1aed90d9ce026efb77285e345")]
 [assembly: System.Reflection.AssemblyProductAttribute("RepairViaContextMenu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RepairViaContextMenu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
