@@ -8,7 +8,7 @@ using Verse.AI;
 
 namespace RepairViaContextMenu;
 
-[HarmonyPatch(typeof(FloatMenuMakerMap), "ChoicesAtFor", new[] { typeof(Vector3), typeof(Pawn), typeof(bool) })]
+[HarmonyPatch(typeof(FloatMenuMakerMap), nameof(FloatMenuMakerMap.ChoicesAtFor))]
 public static class FloatMenuPatch
 {
     private const int RequiredCrafting = 4;
