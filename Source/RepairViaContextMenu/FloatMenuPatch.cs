@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -9,26 +8,14 @@ using Verse.AI;
 
 namespace RepairViaContextMenu;
 
+[HarmonyPatch(typeof(FloatMenuMakerMap), "ChoicesAtFor", new[] { typeof(Vector3), typeof(Pawn), typeof(bool) })]
 public static class FloatMenuPatch
 {
     private const int RequiredCrafting = 4;
 
-    public static IEnumerable<MethodBase> FindTargetMethods()
+    public static void Postfix(Vector3 clickPos, Pawn pawn, ref List<FloatMenuOption> __result)
     {
-        return AccessTools.GetDeclaredMethods(typeof(FloatMenuMakerMap))
-            .Where(m => m.Name == "ChoicesAtFor")
-            .Where(m => typeof(List<FloatMenuOption>).IsAssignableFrom(m.ReturnType));
-    }
-
-    public static void Postfix(object[] __args, ref List<FloatMenuOption> __result)
-    {
-        if (__args == null || __args.Length < 2)
-            return;
-
-        if (__args[0] is not Vector3 clickPos || __args[1] is not Pawn pawn)
-            return;
-
-        if (pawn.Map == null || pawn.Dead || pawn.Downed)
+        if (pawn?.Map == null || pawn.Dead || pawn.Downed)
             return;
 
         __result ??= new List<FloatMenuOption>();
